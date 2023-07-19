@@ -107,8 +107,6 @@ There's a lot going on here, so let's break down what's happening...
 The client needs to know which posts are available to read. We can achieve this by having an API endpoint on the server.
 The following block of code is accessible by sending a GET request to ` /api/posts `
 
-
-
 Integer nec ultricies nisi. Curabitur odio mauris, scelerisque at luctus a, bibendum eget velit. Vivamus id tellus lectus. Nulla in purus sit amet mi tincidunt commodo. Ut auctor ante a mauris dignissim laoreet. Nullam magna arcu, tincidunt nec risus et, mattis fringilla augue. Suspendisse imperdiet, purus vel pharetra bibendum, enim purus convallis quam, ut faucibus nibh libero in enim. Curabitur feugiat leo ac accumsan tempor. Ut non convallis mauris, sed rutrum libero.
 
 ## Here's a list!
@@ -130,29 +128,3 @@ function greet(name: string) {
 ```
 
 Integer nec ultricies nisi. Curabitur odio mauris, scelerisque at luctus a, bibendum eget velit. Vivamus id tellus lectus. Nulla in purus sit amet mi tincidunt commodo. Ut auctor ante a mauris dignissim laoreet. Nullam magna arcu, tincidunt nec risus et, mattis fringilla augue. Suspendisse imperdiet, purus vel pharetra bibendum, enim purus convallis quam, ut faucibus nibh libero in enim. Curabitur feugiat leo ac accumsan tempor. Ut non convallis mauris, sed rutrum libero.
-
-## Here's a list!
-
-1. First item
-2. Second item
-3. Third item
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum odio nisl, nec pretium dolor varius in. Quisque tincidunt egestas libero rhoncus blandit. Etiam elit leo, facilisis id magna sit amet, vestibulum finibus nulla. Vestibulum porttitor nisl id ligula accumsan, et dapibus justo cursus. Phasellus congue mauris vitae dictum auctor. Sed vitae mollis quam. Morbi venenatis metus ligula, sit amet consectetur eros pharetra vel.
-
-## Markdown
-
-Hey friends! 👋
-
-```ts
-function greet(name: string) {
-	console.log(`Hey ${name}! 👋`)
-}
-```
-
-Integer nec ultricies nisi. Curabitur odio mauris, scelerisque at luctus a, bibendum eget velit. Vivamus id tellus lectus. Nulla in purus sit amet mi tincidunt commodo. Ut auctor ante a mauris dignissim laoreet. Nullam magna arcu, tincidunt nec risus et, mattis fringilla augue. Suspendisse imperdiet, purus vel pharetra bibendum, enim purus convallis quam, ut faucibus nibh libero in enim. Curabitur feugiat leo ac accumsan tempor. Ut non convallis mauris, sed rutrum libero.
-
-## Here's a list!
-
-1. First item
-2. Second item
-3. Third item

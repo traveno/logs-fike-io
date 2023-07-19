@@ -1,6 +1,8 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import '../app.css';
+
+    export const prerender = true;
 </script>
 
 <div class="fixed w-screen h-screen top-0 left-0 -z-10 bg-gradient-to-tl from-gray-800 to-gray-700"></div>
