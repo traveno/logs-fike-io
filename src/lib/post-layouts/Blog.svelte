@@ -1,5 +1,6 @@
 <script>
   import { convertDate } from "$lib/utils";
+  import avatar from '$lib/assets/avatar.jpg';
 
   /** @type string */
   export let title;
@@ -15,7 +16,7 @@
     <div class="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">{title}</div>
     <div class="flex flex-row justify-start items-center gap-4">
       <div class="w-12 h-12 rounded-full overflow-hidden drop-shadow pointer-events-none">
-        <img src="/src/assets/avatar.jpg" alt="It's me!" />
+        <img src="{avatar}" alt="It's me!" />
       </div>
       <div class="font-extralight text-lg text-neutral-500">Published {convertDate(date)}</div>
       <div class="grow"></div>
