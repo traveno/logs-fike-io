@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-<title>Index | logs / fike / io</title>
+<title>Index | logs.fike.io</title>
 </svelte:head>
 
 <div class="py-12 px-4 md:px-32">

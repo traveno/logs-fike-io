@@ -14,11 +14,11 @@
   <!-- Heading -->
   <div class="flex flex-col gap-4 py-8">
     <div class="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">{title}</div>
-    <div class="flex flex-row justify-start items-center gap-4">
-      <div class="w-12 h-12 drop-shadow pointer-events-none">
+    <div class="flex flex-row justify-start items-center gap-2 sm:gap-4">
+      <div class="w-12 h-12 drop-shadow pointer-events-none flex flex-col justify-center">
         <img src="{avatar}" alt="It's me!" class="aspect-square rounded-full" />
       </div>
-      <div class="font-extralight text-lg text-neutral-500">Published {convertDate(date)}</div>
+      <div class="font-extralight sm:text-lg text-neutral-500">Published {convertDate(date)}</div>
       <div class="grow"></div>
       
       <!-- Social Buttons -->
