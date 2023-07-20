@@ -7,9 +7,9 @@
 
 <div class="lg:container lg:mx-auto lg:max-w-4xl w-full lg:my-16 drop-shadow-2xl">
   <!-- Banner -->
-  <div class="text-center px-8 py-4 bg-neutral-100 text-neutral-700 flex flex-row gap-8 items-center justify-between border-b-2 border-neutral-300 border-dashed lg:rounded-t-lg">
+  <div class="text-center px-4 py-2 lg:px-8 lg:py-4 bg-neutral-100 text-neutral-700 flex flex-row gap-8 items-center justify-between border-b-2 border-neutral-300 border-dashed lg:rounded-t-lg sticky top-0 z-10 lg:relative">
     
-    <div class="flex flex-row gap-8 justify-center">
+    <div class="flex flex-row gap-4 lg:gap-8 justify-center">
       <!-- svelte-ignore a11y-no-static-element-interactions -->
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <div class="p-2 rounded-full bg-neutral-100 hover:bg-white hover:shadow transition hover:cursor-pointer" on:click={() => history.back()}>
