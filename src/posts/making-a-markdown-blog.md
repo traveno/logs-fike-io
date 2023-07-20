@@ -15,11 +15,13 @@ tags:
 
 ### Hello and welcome
 
-I spend a lot of time reading other blogs on the internet. No, not cooking blogs--they have their place--I'm talking
+I spend a lot of time reading other blogs on the internet. No, not cooking blogs--they have their place--this is
 about developer blogs. The kind that shares content related to webdev and software engineering. Reading these journals
-is a great way to learn tricks or gain insight about the industry. I'm also particular about
-my application design; inspiration is very welcome around here. Hopefully I didn't rub any food bloggers the wrong way. The baking recipes from a stranger's cousin's 
-grandmother are invaluable. My family never knows what to expect from me at gatherings... 
+is a great way to learn tricks or gain insight about the industry, and I'm also particular about
+my application design, so I know they're great sources of inspiration too.
+
+Oh, hopefully I didn't rub any food bloggers the wrong way. Just to be clear, *your 
+grandmother's recipes are priceless*. My family never knows what to expect from me at gatherings... 
 
 Recently, I thought to myself, *why not write my own?* Who knows, maybe I could provide **you** food for thought. Software food, that is.
 Now that'd be cool. As a bonus, *I'll write my first entry about developing this very blog!* I know exactly what libraries
@@ -31,6 +33,8 @@ Firstly, I'd like to keep it simple. This is just a personal site and the scope 
 that collates and renders markdown files (as posts). Also, I will be the only user (no authentication system needed). 
 Finally, it should dish out my ramblings in style, because
 reading something that is a mess visually does not inspire my confidence! Just sayin'.
+
+![Avatar](./assets/test.png)
 
 ## Architecture
 
@@ -64,7 +68,7 @@ Key libraries we'll use to write this...
 
 </Window>
 
-Looks familiar right? Effortless and uniform.
+Looks familiar right? Effortless and consistent! :clap:
 
 ## Getting started
 

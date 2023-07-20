@@ -1,7 +1,8 @@
 import { defineMDSveXConfig as defineConfig, escapeSvelte } from "mdsvex";
 import shiki from 'shiki';
 import rehypeExternalLinks from "rehype-external-links";
-
+import relativeImages from 'mdsvex-relative-images';
+import remarkEmoji from 'remark-emoji';
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
@@ -12,6 +13,8 @@ const config = defineConfig({
   },
 
   remarkPlugins: [
+    [relativeImages],
+    [remarkEmoji]
   ],
   rehypePlugins: [
     [rehypeExternalLinks, { target: ['_blank'] }]

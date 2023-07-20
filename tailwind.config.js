@@ -7,7 +7,8 @@ export default {
     extend: {
       fontFamily: {
         serif: ['Noto Serif', ...defaultTheme.fontFamily.serif],
-        sans: ['Niramit', ...defaultTheme.fontFamily.sans]
+        sans: ['Niramit', ...defaultTheme.fontFamily.sans],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
       },
       typography (theme) {
         return {

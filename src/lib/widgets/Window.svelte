@@ -13,3 +13,13 @@
   </div>
   <slot></slot>
 </div>
+
+<style>
+  .code-window :global(pre.shiki)  {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem/* 8px */;
+    border-bottom-right-radius: 0.5rem/* 8px */;
+  }
+</style>
