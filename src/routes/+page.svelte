@@ -9,16 +9,16 @@
 <title>Index | logs / fike / io</title>
 </svelte:head>
 
-<div class="py-12 px-4 lg:px-32">
+<div class="py-12 px-4 md:px-32">
   <div class="w-full">
     <div class="border-b border-b-neutral-300 pb-4">
       <h2 class="text-3xl tracking-tight font-semibold text-neutral-900 sm:text-4xl">Recent Posts</h2>
     </div>
-    <div class="mt-8 grid gap-4 grid-cols-1">
+    <div class="mt-8 grid gap-4 lg:grid-cols-2">
       {#each posts || [] as post}
       <a href="/{post.slug}">
-        <div class="border border-neutral-300 p-4 rounded-lg flex flex-col justify-between transition hover:shadow hover:scale-[1.01]">
-          <p class="text-xl text-neutral-700">{post.title}</p>
+        <div class="border border-neutral-300 p-4 rounded-lg flex flex-col justify-between transition text-neutral-700 hover:shadow-lg hover:scale-[1.01]">
+          <p class="text-xl">{post.title}</p>
           <p class="mt-3 text-neutral-500">{post.blurb}</p>
           <div class="mt-3">
             <div class="flex flex-row justify-between items-center">
