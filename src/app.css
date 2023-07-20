@@ -17,7 +17,7 @@
   }
 
   body {
-    @apply overflow-y-scroll;
+    @apply overflow-y-scroll lg:py-32;
   }
 }
 

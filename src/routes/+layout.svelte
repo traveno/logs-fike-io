@@ -1,11 +1,13 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import '../app.css';
+
+  export let data;
 </script>
 
 <div class="fixed w-screen h-screen top-0 left-0 -z-10 from-zinc-800 to-gray-700 bg-neutral-100 lg:bg-gradient-to-tl"></div>
 
-<div class="lg:container lg:mx-auto lg:max-w-4xl w-full lg:my-16 lg:drop-shadow-2xl">
+<div class="lg:container lg:mx-auto lg:max-w-4xl w-full lg:drop-shadow-2xl transition re">
   <!-- Banner -->
   <div class="sticky top-0 z-10 lg:relative">
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 bg-neutral-100 text-neutral-700 flex flex-row gap-8 items-center justify-between lg:rounded-t-lg ">
@@ -52,10 +54,21 @@
     <div class="absolute w-full bg-gradient-to-t from-transparent to-black/10 h-2 lg:hidden"></div>
   </div>
   
+  
+
+  <!-- For page transitions -->
+  {#key data.url}
   <!-- Content -->
-  <div class="bg-neutral-100 pb-12 md:py-12 lg:py-12 lg:pb-32 lg:rounded-b-lg">
-    <slot />
+  <div class="bg-neutral-100 pb-12 md:py-12 md:pb-24 lg:py-12 lg:pb-32 lg:rounded-b-lg">
+  <!-- <div class="bg-neutral-100 pb-12 md:py-12 lg:py-12 lg:pb-32 lg:rounded-b-lg absolute w-full" out:slide={{ duration: 500, axis:  'y' }} in:slide={{ duration: 500, delay: 500, axis: 'y' }}> -->
+  <!-- <div class="bg-neutral-100 pb-12 md:py-12 lg:py-12 lg:pb-32 lg:rounded-b-lg absolute w-full" out:fly={{ duration: 500, x: 100 }} in:fly={{ duration: 500, delay: 250, x: -100 }}> -->
+    <div>
+      <slot />
+    </div>
   </div>
+  {/key}
+  
+  
   
   <!-- Footer -->
   <!-- <div class="text-center py-4 bg-neutral-300 text-neutral-700 lg:rounded-b-lg flex flex-row gap-8 items-center justify-between px-8">
