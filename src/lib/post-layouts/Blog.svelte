@@ -10,7 +10,7 @@
   export let tags;
 </script>
 
-<div class="lg:px-32 md:px-12 px-4 mx-auto">
+<div class="lg:px-32 md:px-12 px-4 mx-auto max-w-prose md:text-lg">
   <!-- Heading -->
   <div class="flex flex-col gap-4 py-8">
     <div class="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">{title}</div>
