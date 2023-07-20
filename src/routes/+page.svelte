@@ -39,41 +39,7 @@
           </div>
         </div>
       </a>
-      <a href="/{post.slug}">
-        <div class="border border-neutral-300 p-4 rounded-lg flex flex-col justify-between transition hover:shadow-lg hover:scale-[1.01]">
-          <p class="text-xl text-neutral-700">{post.title}</p>
-          <p class="mt-3 text-neutral-500">{post.blurb}</p>
-          <div class="mt-4">
-            <div class="text-end text-sm text-neutral-500">
-              {convertDate(post.date)}
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="/{post.slug}">
-        <div class="border border-neutral-300 p-4 rounded-lg flex flex-col justify-between transition hover:shadow-lg hover:scale-[1.01]">
-          <p class="text-xl text-neutral-700">{post.title}</p>
-          <p class="mt-3 text-neutral-500">{post.blurb}</p>
-          <div class="mt-4">
-            <div class="text-end text-sm text-neutral-500">
-              {convertDate(post.date)}
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="/{post.slug}">
-        <div class="border border-neutral-300 p-4 rounded-lg flex flex-col justify-between transition hover:shadow-lg hover:scale-[1.01]">
-          <p class="text-xl text-neutral-700">{post.title}</p>
-          <p class="mt-3 text-neutral-500">{post.blurb}</p>
-          <div class="mt-4">
-            <div class="text-end text-sm text-neutral-500">
-              {convertDate(post.date)}
-            </div>
-          </div>
-        </div>
-      </a>
       {/each}
-      
     </div>
   </div>
 </div>

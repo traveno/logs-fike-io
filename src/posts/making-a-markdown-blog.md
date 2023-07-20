@@ -20,12 +20,12 @@ about developer blogs. The kind that shares content related to webdev and softwa
 is a great way to learn tricks or gain insight about the industry, and I'm also particular about
 my application design, so I know they're great sources of inspiration too.
 
-Oh, hopefully I didn't rub any food bloggers the wrong way. Just to be clear, *your 
-grandmother's recipes are priceless*. My family never knows what to expect from me at gatherings... 
+Oh, hopefully I didn't rub any food bloggers the wrong way. Just to be clear, your 
+grandmother's recipes are priceless. Truly. My family never knows what to expect from me at gatherings... 
 
-Recently, I thought to myself, *why not write my own?* Who knows, maybe I could provide **you** food for thought. Software food, that is.
-Now that'd be cool. As a bonus, *I'll write my first entry about developing this very blog!* I know exactly what libraries
-I'd like to use to achieve this, so let's just jump in.
+Recently, I thought to myself, *"why not write my own?"* Who knows, maybe I could provide you--the reader--food for thought. Software food, that is.
+Now that'd be cool. So let's jump in, I know exactly what libraries I'd like to use to achieve this. 
+Once this project is deployed, **I'll write my first entry about developing this very blog!** :grin:
 
 ### Goals
 
@@ -35,6 +35,7 @@ Finally, it should dish out my ramblings in style, because
 reading something that is a mess visually does not inspire my confidence! Just sayin'.
 
 ![Avatar](./assets/test.png)
+[Relative link to / (for testing)](/)
 
 ## Architecture
 

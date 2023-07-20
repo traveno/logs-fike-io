@@ -3,9 +3,9 @@
   import '../app.css';
 </script>
 
-<div class="fixed w-screen h-screen top-0 left-0 -z-10 bg-gradient-to-tl from-zinc-800 to-gray-700"></div>
+<div class="fixed w-screen h-screen top-0 left-0 -z-10 from-zinc-800 to-gray-700 bg-neutral-100 lg:bg-gradient-to-tl"></div>
 
-<div class="lg:container lg:mx-auto lg:max-w-4xl w-full lg:my-16 drop-shadow-2xl">
+<div class="lg:container lg:mx-auto lg:max-w-4xl w-full lg:my-16 lg:drop-shadow-2xl">
   <!-- Banner -->
   <div class="sticky top-0 z-10 lg:relative">
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 bg-neutral-100 text-neutral-700 flex flex-row gap-8 items-center justify-between lg:rounded-t-lg ">
