@@ -13,7 +13,7 @@ tags:
 
 ## Hello and welcome
 
-[Check out my post about writing this blog!](/making-a-markdown-blog#hashtest)
+[Check out my post about writing this blog!](/making-a-markdown-blog)
 
 <Window name="Test window">
 
