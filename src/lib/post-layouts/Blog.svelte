@@ -71,7 +71,7 @@
   <!-- Divider -->
   <!-- <div class="w-1/12 mx-auto h-[1px] bg-neutral-300"></div> -->
 
-  <div class="prose md:prose-lg prose-neutral mt-8">
+  <div class="prose md:prose-lg prose-neutral mt-8 !border-black">
     <slot />
   </div>
 </div>

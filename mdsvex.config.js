@@ -3,6 +3,8 @@ import shiki from 'shiki';
 import rehypeExternalLinks from "rehype-external-links";
 import relativeImages from 'mdsvex-relative-images';
 import remarkEmoji from 'remark-emoji';
+import remarkMath from 'remark-math';
+import rehypeKatexSvelte from 'rehype-katex-svelte';
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
@@ -13,11 +15,14 @@ const config = defineConfig({
   },
 
   remarkPlugins: [
+    [remarkMath],
     [relativeImages],
-    [remarkEmoji]
+    [remarkEmoji],
+    
   ],
   rehypePlugins: [
-    [rehypeExternalLinks, { target: ['_blank'] }]
+    [rehypeKatexSvelte],
+    [rehypeExternalLinks, { target: ['_blank'] }],
   ],
   highlight: {
     highlighter: async (code, lang = 'text') => {

@@ -15,6 +15,13 @@ tags:
 
 [Check out my post about writing this blog!](/making-a-markdown-blog)
 
+Inline $f(x)=5$ test.
+
+
+$$
+ \dfrac{x}{y}
+$$
+
 <Window name="Test window">
 
 ```
