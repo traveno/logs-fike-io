@@ -17,3 +17,5 @@ export const convertDate = (published: string) => {
   const [year, month, day] = date.split('-');
   return `${months[parseInt(month) - 1]} ${day}, ${year}`;
 };
+
+export const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(() => resolve(), ms));

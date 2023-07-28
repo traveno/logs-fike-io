@@ -1,18 +1,33 @@
 <script lang="ts">
   import { convertDate } from '$lib/utils.js';
+  import Tag from '$lib/components/Tag.svelte';
   
   export let data;
   const { posts } = data;
+
+  $: tags = posts.flatMap(p => p.tags);
 </script>
 
 <svelte:head>
 <title>Index | logs.fike.io</title>
 </svelte:head>
 
-<div class="py-12 px-4 md:px-32">
+<div class=" px-4 md:px-32">
   <div class="w-full">
+    <div class="pb-8">
+      <h1 class="text-3xl font-mono font-thin border-b border-neutral-300 pb-2">tags</h1>
+      <div class="py-4 flex flex-row gap-2 flex-wrap justify-center">
+       {#each tags as tag}
+         <span class="inline-block w-fit">
+           <Tag name={tag} />
+         </span>
+       {/each}
+      </div>
+    </div>
+
+
     <div class="border-b border-b-neutral-300 pb-4">
-      <h2 class="text-3xl tracking-tight font-semibold text-neutral-900 sm:text-4xl">Recent Posts</h2>
+      <h1 class="text-3xl font-mono font-thin">recent posts</h1>
     </div>
     <div class="mt-8 grid gap-4 lg:grid-cols-2">
       {#each posts || [] as post}

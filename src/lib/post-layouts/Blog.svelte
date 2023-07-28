@@ -1,6 +1,7 @@
 <script>
   import { convertDate } from "$lib/utils";
   import avatar from '$lib/assets/avatar.jpg';
+    import Tag from "$lib/components/Tag.svelte";
 
   /** @type string */
   export let title;
@@ -13,34 +14,22 @@
 <div class="px-4 md:px-8 mx-auto max-w-prose md:text-lg">
   <!-- Heading -->
   <div class="flex flex-col gap-4 py-8">
-    <div class="text-3xl sm:text-4xl font-serif text-neutral-900 tracking-tight">{title}</div>
-    <div class="flex flex-row justify-start items-center gap-2 sm:gap-4 text-neutral-500">
+    <h1 class="text-3xl sm:text-4xl font-serif tracking-tight">{title}</h1>
+    <div class="flex flex-row justify-start items-center gap-2 sm:gap-4">
 
       
       <div class="w-14 h-14 flex flex-col justify-center select-none pointer-events-none">
         <img src="{avatar}" alt="It's me!" class="aspect-square rounded-full shadow-md" />
       </div>
-      <div class="font-extralight sm:text-lg">Published {convertDate(date)}</div>
+      <div class="font-extralight sm:text-lg text-neutral-500 dark:text-neutral-400">Published {convertDate(date)}</div>
       
       <div class="grow"></div>
 
-      <div class="flex flex-row justify-center item-center gap-3 text-neutral-500">
+      <div class="flex flex-row justify-center item-center gap-3">
         {#each tags as tag}
-          <div class="font-mono text-sm rounded-full px-1.5 bg-slate-200 hover:text-neutral-700 transition cursor-pointer">
-            <div class="flex flex-row items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5" />
-              </svg>
-              <div>{tag}</div>
-            </div>
-          </div>
+        <Tag name={tag} />
         {/each}
       </div>
-      
-      
-      
-
-
       
       
     </div>
@@ -71,7 +60,7 @@
   <!-- Divider -->
   <!-- <div class="w-1/12 mx-auto h-[1px] bg-neutral-300"></div> -->
 
-  <div class="prose md:prose-lg prose-neutral mt-8 !border-black">
+  <div class="prose md:prose-lg mt-8">
     <slot />
   </div>
 </div>

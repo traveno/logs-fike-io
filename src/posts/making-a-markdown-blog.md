@@ -13,8 +13,6 @@ tags:
   import Window from '/src/lib/widgets/Window.svelte';
 </script>
 
-### Hello and welcome
-
 I spend a lot of time reading other blogs on the internet. No, not cooking blogs--they have their place--this is
 about developer blogs. The kind that shares content related to webdev and software engineering. Reading these journals
 is a great way to learn tricks or gain insight about the industry, and I'm also particular about
@@ -27,7 +25,7 @@ Recently, I thought to myself, *"why not write my own?"* Who knows, maybe I coul
 Now that'd be cool. So let's jump in, I know exactly what libraries I'd like to use to achieve this. 
 Once this project is deployed, **I'll write my first entry about developing this very blog!** :grin:
 
-### Goals
+## Goals
 
 Firstly, I'd like to keep it simple. This is just a personal site and the scope is quite small. I need a web application
 that collates and renders markdown files (as posts). Also, I will be the only user (no authentication system needed). 
@@ -37,7 +35,7 @@ reading something that is a mess visually does not inspire my confidence! Just s
 ![Avatar](./assets/test.png)
 [Relative link to / (for testing)](/)
 
-## Architecture
+### Architecture
 
 Key libraries we'll use to write this...
 
