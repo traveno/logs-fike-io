@@ -25,7 +25,7 @@
   }
 
   .prose {
-    code:not(.code-window *) {
+    code:not(.shiki *) {
       @apply py-1 px-1.5 rounded !text-neutral-700 dark:!text-neutral-400 dark:bg-neutral-700 bg-slate-200;
 
       &::before {
