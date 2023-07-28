@@ -78,7 +78,9 @@
   <!-- Banner -->
   <div class="sticky top-0 z-10 lg:relative bg-neutral-100 dark:bg-neutral-900 lg:rounded-t-lg">
     
-    <PageCorner isVisible={cornerIsVisible} />
+    <div class="hidden md:block">
+      <PageCorner isVisible={cornerIsVisible} />
+    </div>
 
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 flex flex-row gap-24 justify-evenly items-center">
       <div class="icon flex flex-row gap-4 lg:gap-6 justify-center">

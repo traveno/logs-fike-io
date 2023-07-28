@@ -6,7 +6,7 @@
   import { offset } from "@floating-ui/core";
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
-    import { writable } from "svelte/store";
+  import { writable } from "svelte/store";
 
   // Control vars
   // Can the user see the corner?
@@ -27,29 +27,26 @@
   const [floatRef, floatContent] = createFloatingActions({
     strategy: "absolute",
     placement: "left",
-    middleware: [
-      offset(15),
-      arrow({ element: arrowRef })
-    ],
+    middleware: [offset(15), arrow({ element: arrowRef })],
     onComputed({ placement, middlewareData }) {
       const { x, y } = middlewareData.arrow!;
       const staticSide = {
-        top: 'bottom',
-        right: 'left',
-        bottom: 'top',
-        left: 'right',
-      }[placement.split('-')[0]];
+        top: "bottom",
+        right: "left",
+        bottom: "top",
+        left: "right",
+      }[placement.split("-")[0]];
 
       Object.assign($arrowRef.style, {
         left: x != null ? `${x}px` : "",
         top: y != null ? `${y}px` : "",
-        [staticSide!]: "-6px"
+        [staticSide!]: "-6px",
       });
-    }
+    },
   });
 
   let tooltipVisible = false;
-  let tooltipText = 'roll the dice?';
+  let tooltipText = "roll the dice?";
 
   // Regarding the content within the page peel
   let content = noMouth;
@@ -87,49 +84,50 @@
 </script>
 
 <div class="notrans floating absolute z-20" style="animation-delay: 50ms;">
-  
   {#if tooltipVisible}
-  
     <div
-      
       class="absolute"
       use:floatContent
       in:fade={{ duration: 300, delay: 500 }}
       out:fade={{ duration: 300 }}
     >
       <div class="arrow absolute z-10" bind:this={$arrowRef} />
-      <div id="tooltip" class="px-3 py-2 w-max rounded-lg typewriter flex flex-row justify-start">
-        <h1 class="!font-mono !text-neutral-100 font-bold text-xl">{tooltipText}</h1>
+      <div
+        id="tooltip"
+        class="px-3 py-2 w-max rounded-lg typewriter flex flex-row justify-start"
+      >
+        <h1 class="!font-mono !text-neutral-100 font-bold text-xl">
+          {tooltipText}
+        </h1>
       </div>
     </div>
   {/if}
 </div>
 
-
-<div class="notrans absolute top-0 right-0 rounded-tr-lg rounded-bl-lg ring-1 ring-black/5 dark:ring-white/5">
+<div
+  class="notrans absolute z-10 top-0 right-0 rounded-tr-lg rounded-bl-lg ring-1 ring-black/5 dark:ring-white/5"
+>
   <div
     class="container relative {isReactive ? 'hoverable' : ''}"
     style={cssCorner}
-    on:mouseenter={() => isUserHovering = true}
-    on:mouseleave={() => isUserHovering = false}
+    on:mouseenter={() => (isUserHovering = true)}
+    on:mouseleave={() => (isUserHovering = false)}
     role="none"
   >
     <div
-      class="absolute corner top-0 right-0 left-0 bottom-0 overflow-hidden  z-10"
+      class="absolute corner top-0 right-0 left-0 bottom-0 overflow-hidden z-10"
     >
-      <div
-        class="graph absolute top-0 right-0 select-none w-72 h-72"
-      >
+      <div class="graph absolute top-0 right-0 select-none w-72 h-72">
         <div
           class="absolute top-0 right-0 m-6 w-20 h-20 transition duration-500 {isReactive
             ? 'cursor-pointer hover:scale-110 '
             : ''}"
           role="none"
           on:click={() => interact()}
-          on:mouseenter={() => tooltipVisible = isUserHovering && isReactive}
-          on:mouseleave={() => tooltipVisible = false}
+          on:mouseenter={() => (tooltipVisible = isUserHovering && isReactive)}
+          on:mouseleave={() => (tooltipVisible = false)}
         >
-          <div id="content" class="{rocketAnimated ? "floating" : ""}">
+          <div id="content" class={rocketAnimated ? "floating" : ""}>
             <img
               src={content}
               class="pointer-events-none select-none"
@@ -142,13 +140,9 @@
       </div>
     </div>
 
-    <div
-      class="absolute curl top-0 right-0 left-0 bottom-0 rounded-bl-lg"
-    />
+    <div class="absolute curl top-0 right-0 left-0 bottom-0 rounded-bl-lg" />
   </div>
 </div>
-
-
 
 <style lang="postcss">
   .arrow {
@@ -168,7 +162,8 @@
     @apply !text-neutral-100 border-neutral-100;
   }
 
-  .hoverable #content:hover, #tooltip {
+  .hoverable #content:hover,
+  #tooltip {
     filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.35));
   }
 
@@ -178,25 +173,32 @@
 
   .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid black; /* The typwriter cursor */
+    border-right: 0.15em solid black; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     /* margin: 0 auto; Gives that scrolling effect as the typing happens */
-    letter-spacing: .10em; /* Adjust as needed */
-    animation: 
-      typing 1.0s 0.5s steps(14, end),
-      blink-caret .9s  infinite;
+    letter-spacing: 0.1em; /* Adjust as needed */
+    animation: typing 1s 0.5s steps(14, end), blink-caret 0.9s infinite;
   }
 
   /* The typing effect */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 
   /* The typewriter cursor effect */
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(245, 245, 245); }
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(245, 245, 245);
+    }
   }
 
   .floating {
