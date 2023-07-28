@@ -94,7 +94,7 @@
       <div class="arrow absolute z-10" bind:this={$arrowRef} />
       <div
         id="tooltip"
-        class="px-3 py-2 w-max rounded-lg typewriter flex flex-row justify-start"
+        class="px-3 py-2 w-fit rounded-lg typewriter"
       >
         <h1 class="!font-mono !text-neutral-100 font-bold text-xl">
           {tooltipText}
@@ -152,7 +152,7 @@
     background: linear-gradient(-45deg, #5c7adc, #617cd7 100%);
     border-top: 3px solid;
     border-right: 3px solid;
-    @apply border-neutral-100 rounded-tr;
+    @apply border-neutral-100;
   }
 
   #tooltip {
@@ -173,11 +173,10 @@
 
   .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid black; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+    /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.1em; /* Adjust as needed */
-    animation: typing 1s 0.5s steps(14, end), blink-caret 0.9s infinite;
+    animation: typing 0.5s 0.5s steps(14, end);
   }
 
   /* The typing effect */
@@ -187,17 +186,6 @@
     }
     to {
       width: 100%;
-    }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: rgb(245, 245, 245);
     }
   }
 
