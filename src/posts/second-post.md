@@ -1,6 +1,6 @@
 ---
-title: An example as a second post
-date: 2023-07-19
+title: LaTeX within Markdown, can it be done?
+date: 2023-08-08
 blurb: Who said that?
 published: true
 layout: blog
@@ -11,25 +11,34 @@ tags:
   import Window from '/src/lib/widgets/Window.svelte';
 </script>
 
-## Hello and welcome
+If $Y_1$ is a standard normal random variable, then $Y_1^2$ will follow a Chi-square distribution with 1 degree of freedom
 
-[Check out my post about writing this blog!](/making-a-markdown-blog)
 
-Inline $f(x)=5$ test.
-
+It can be observed that $Y_1$ has a range of $-1 \leq Y_1 \leq 1$. Similarly, $Y_2$ is $0 \leq Y_2 \leq 1$. To form the triangle shape,
+an additional constraint is needed: $|Y_1| + Y_2 \leq 1$.
 
 $$
- \dfrac{x}{y}
+\begin{equation*}
+  f(y_1,y_2) = \begin{cases}
+    1 & -1 \leq Y_1 \leq 1, 0 \leq Y_2 \leq 1, |Y_1| + Y_2 \leq 1 \\
+    0 & \textnormal{otherwise}
+  \end{cases}
+\end{equation*}
 $$
 
-<Window name="Test window">
+A split integral will be needed to find $E(Y_1Y_2)$ due to the special constraint.
 
-```
-It works!
-```
+$$
+\begin{align*}
+  E(Y_1Y_2) &= \int_{-1}^{0}\int_{0}^{1+y_1}y_1y_2dy_2dy_1 + \int_{0}^{1}\int_{0}^{1-y_1}y_1y_2dy_2dy_1 \\
+  &= \int_{-1}^{0}\dfrac{y_1(1+y_1)^2}{2}dy_1 + \int_{0}^{1}\dfrac{y_1(1-y_1)^2}{2}dy_1 \\
+  &= \dfrac{1}{2}\int_{-1}^{0}y_1(1+y_1)^2dy_1 + \dfrac{1}{2} \int_{0}^{1}y_1(1-y_1)^2dy_1 \\
+  &= \dfrac{1}{2}\int_{-1}^{0}\left(y_1+y_1^3+2y_1^2\right)dy_1 + \dfrac{1}{2}\int_{0}^{1}\left(y_1+y_1^3-2y_1^2\right)dy_1 \textnormal{ (expanded)} \\
+  &= \dfrac{1}{2}\left[ \dfrac{y_1^2}{2} + \dfrac{y_1^4}{4} + \dfrac{2y_1^3}{3} \right]_{-1}^0 + \dfrac{1}{2}\left[ \dfrac{y_1^2}{2} + \dfrac{y_1^4}{4} - \dfrac{2y_1^3}{3} \right]_0^1 \\
+  &= -\cancel{\dfrac{1}{2}\left[ \dfrac{1}{2} + \dfrac{1}{4} - \dfrac{2}{3} \right]} + \cancel{\dfrac{1}{2}\left[ \dfrac{1}{2} + \dfrac{1}{4} - \dfrac{2}{3} \right]} \\
+  &= 0
+\end{align*}
+$$
 
-</Window>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum odio nisl, nec pretium dolor varius in. Quisque tincidunt egestas libero rhoncus blandit. Etiam elit leo, facilisis id magna sit amet, vestibulum finibus nulla. Vestibulum porttitor nisl id ligula accumsan, et dapibus justo cursus. Phasellus congue mauris vitae dictum auctor. Sed vitae mollis quam. Morbi venenatis metus ligula, sit amet consectetur eros pharetra vel.
-
-Integer nec ultricies nisi. Curabitur odio mauris, scelerisque at luctus a, bibendum eget velit. Vivamus id tellus lectus. Nulla in purus sit amet mi tincidunt commodo. Ut auctor ante a mauris dignissim laoreet. Nullam magna arcu, tincidunt nec risus et, mattis fringilla augue. Suspendisse imperdiet, purus vel pharetra bibendum, enim purus convallis quam, ut faucibus nibh libero in enim. Curabitur feugiat leo ac accumsan tempor. Ut non convallis mauris, sed rutrum libero.
+The uniqueness property of mgfs allows us to show that $U$ follows a Chi-square distribution with 2
+degrees of freedom.

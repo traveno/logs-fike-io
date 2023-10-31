@@ -4,9 +4,10 @@
   import die from "$lib/assets/die.webp";
   import { arrow, createFloatingActions } from "svelte-floating-ui";
   import { offset } from "@floating-ui/core";
-  import { fade } from "svelte/transition";
+  import { fade, fly, slide } from "svelte/transition";
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
+  import { goto } from "$app/navigation";
 
   // Control vars
   // Can the user see the corner?
@@ -22,8 +23,12 @@
   // Size in pixels for width and height
   let cornerSize = 64;
 
+  // onMount(() => {
+  //   fetch('https://icanhazdadjoke.com/', { method: 'GET', headers: { 'Accept': 'application/json' } }).then(data => data.json()).then(json => console.log(json));
+  // })
+
   // Tooltip
-  const arrowRef = writable<HTMLElement>();
+  const arrowRef = writable<HTMLElement>(null!);
   const [floatRef, floatContent] = createFloatingActions({
     strategy: "absolute",
     placement: "left",
@@ -37,7 +42,7 @@
         left: "right",
       }[placement.split("-")[0]];
 
-      Object.assign($arrowRef.style, {
+      Object.assign($arrowRef?.style, {
         left: x != null ? `${x}px` : "",
         top: y != null ? `${y}px` : "",
         [staticSide!]: "-6px",
@@ -46,7 +51,7 @@
   });
 
   let tooltipVisible = false;
-  let tooltipText = "roll the dice?";
+  let tooltipText = "feeling lucky?";
 
   // Regarding the content within the page peel
   let content = noMouth;
@@ -80,6 +85,10 @@
     tooltipVisible = false;
     await sleep(500);
     isReactive = false;
+    await sleep(500);
+    goto('/random');
+    await sleep(1000);
+    isReactive = true;
   }
 </script>
 
@@ -174,7 +183,7 @@
   .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
-    /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0.1em; /* Adjust as needed */
     animation: typing 0.5s 0.5s steps(14, end);
   }

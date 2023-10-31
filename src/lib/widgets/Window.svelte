@@ -9,7 +9,7 @@
       <div class="h-3 w-3 rounded-full bg-yellow-400"></div>
       <div class="h-3 w-3 rounded-full bg-green-400"></div>
     </div>
-    <div class="text-center text-neutral-200 text-xs sm:text-sm py-1">{name}</div>
+    <div class="text-center !text-neutral-200 text-xs sm:text-sm py-1">{name}</div>
   </div>
   <slot></slot>
 </div>
