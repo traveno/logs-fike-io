@@ -15,4 +15,6 @@ tags:
 
 The Voron 
 
-<Image imgURL="/src/posts/assets/k3-cover.jpg" caption="Aligning the crossing linear rails was not as bad as I imagined it would be!" />
+<Image caption="Aligning the crossing linear rails was not as bad as I imagined it would be!">
+<img src="./assets/k3-cover.jpg">
+</Image>
