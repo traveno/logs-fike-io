@@ -2,7 +2,7 @@
 title: LaTeX within Markdown, can it be done?
 date: 2023-08-08
 blurb: Who said that?
-published: true
+published: false 
 layout: blog
 tags:
   - testing

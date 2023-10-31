@@ -76,7 +76,7 @@
 
 <div class="relative lg:container lg:mx-auto lg:max-w-4xl w-full lg:shadow-xl ring-1 rounded-lg ring-slate-900/5 dark:ring-white/5 overflow-hidden">
   <!-- Banner -->
-  <div class="sticky top-0 z-10 lg:relative bg-neutral-100 dark:bg-neutral-900 lg:rounded-t-lg">
+  <div class="sticky top-0 z-10 lg:relative bg-neutral-50 dark:bg-neutral-900 lg:rounded-t-lg">
     
     <div class="hidden md:block">
       <PageCorner isVisible={cornerIsVisible} />
@@ -133,7 +133,7 @@
   <!-- For page transitions -->
   {#key data.url}
   <!-- Content -->
-  <div class="bg-neutral-100 dark:bg-neutral-900 pb-12 md:py-12 md:pb-24 lg:py-12 lg:pb-32 lg:rounded-b-lg">
+  <div class="bg-neutral-50 dark:bg-neutral-900 pb-12 md:py-12 md:pb-24 lg:py-12 lg:pb-32 lg:rounded-b-lg">
     <div>
       <slot />
     </div>

@@ -2,7 +2,7 @@
 title: Let's write our own developer blog from the ground up!
 date: 2023-07-19
 blurb: The power of markdown files as a blogging tool.
-published: true,
+published: false
 layout: blog
 tags:
   - sveltekit
