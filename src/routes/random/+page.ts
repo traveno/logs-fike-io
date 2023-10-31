@@ -8,5 +8,7 @@ export const load: PageLoad = async ({ fetch }) => {
 
   const randomPost = posts[Math.floor(Math.random() * posts.length)];
 
-  goto(randomPost.slug);
+  return {
+    slug: randomPost.slug
+  }
 }
