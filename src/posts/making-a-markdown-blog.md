@@ -2,7 +2,7 @@
 title: Let's write our own developer blog from the ground up!
 date: 2023-07-19
 blurb: The power of markdown files as a blogging tool.
-published: false
+published: true 
 layout: blog
 tags:
   - sveltekit
@@ -109,6 +109,8 @@ There's a lot going on here, so let's break down what's happening...
 
 The client needs to know which posts are available to read. We can achieve this by having an API endpoint on the server.
 The following block of code is accessible by sending a GET request to ` /api/posts `
+
+Etc, etc. The remaining text is a style test using Lorem Ipsum.
 
 Integer nec ultricies nisi. Curabitur odio mauris, scelerisque at luctus a, bibendum eget velit. Vivamus id tellus lectus. Nulla in purus sit amet mi tincidunt commodo. Ut auctor ante a mauris dignissim laoreet. Nullam magna arcu, tincidunt nec risus et, mattis fringilla augue. Suspendisse imperdiet, purus vel pharetra bibendum, enim purus convallis quam, ut faucibus nibh libero in enim. Curabitur feugiat leo ac accumsan tempor. Ut non convallis mauris, sed rutrum libero.
 

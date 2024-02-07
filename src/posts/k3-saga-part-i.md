@@ -1,7 +1,7 @@
 ---
 title: "The K3 Saga: Part I"
 date: 2023-10-31
-blurb: The power of markdown files as a blogging tool.
+blurb: It begins.
 published: true
 layout: blog
 tags:
@@ -13,8 +13,6 @@ tags:
   import Image from '/src/lib/widgets/Image.svelte';
 </script>
 
-The Voron 
-
-<Image caption="Aligning the crossing linear rails was not as bad as I imagined it would be!">
+<Image caption="Alignment of the cross-rail gantry.">
 <img src="./assets/k3-cover.jpg">
 </Image>
