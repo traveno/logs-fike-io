@@ -110,7 +110,7 @@
   class="relative lg:container lg:mx-auto lg:max-w-4xl w-full lg:shadow-xl ring-1 rounded-lg ring-slate-900/5 dark:ring-white/5 overflow-hidden"
 >
   <!-- Banner -->
-  <div class="sticky top-0 z-10 lg:relative bg-neutral-50 dark:bg-neutral-900 lg:rounded-t-lg">
+  <div class="sticky top-0 z-10 lg:relative lg:pt-8 bg-neutral-50 dark:bg-neutral-900 lg:rounded-t-lg">
     <div class="hidden md:block">
       <PageCorner isVisible={cornerIsVisible} />
     </div>
@@ -230,7 +230,7 @@
           </div>
         </div>
 
-        <div class="font-mono text-xs text-neutral-400 dark:text-neutral-600 absolute top-10 right-0">
+        <div class="font-mono text-xs text-neutral-400 dark:text-neutral-600 absolute top-10 right-0 hidden lg:block">
           {data.motd}
         </div>
       </div>
