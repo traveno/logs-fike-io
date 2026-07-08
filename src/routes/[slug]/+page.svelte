@@ -10,6 +10,7 @@
   <title>{data.meta.title} — logs.fike.io</title>
   <meta property="og:type" content="article" />
   <meta property="og:title" content={data.meta.title} />
+  <meta name="description" content={data.meta.blurb} />
 </svelte:head>
 
 <article>
