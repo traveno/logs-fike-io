@@ -10,6 +10,6 @@ export const load: PageLoad = async ({ params }) => {
       meta: post.metadata
     }
   } catch(e) {
-    throw error(404, `Could not find ${params.slug}`);
+    error(404, `Could not find ${params.slug}`);
   }
 }
