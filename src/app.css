@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "@tailwindcss/typography";
 
@@ -11,24 +11,34 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-serif: "Noto Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-sans: "Niramit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-sans: 'Niramit', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 @layer base {
-
   .tag {
-    transition: opacity 200ms ease-in-out, color 1s ease-in-out, background-color 1s ease-in-out, transform 200ms ease-in-out;
+    transition:
+      opacity 200ms ease-in-out,
+      color 1s ease-in-out,
+      background-color 1s ease-in-out,
+      transform 200ms ease-in-out;
   }
-  
 
   body *:not(button):not(.notrans):not(.notrans *):not(.tag):not(.icon-bright *):not(.icon-dim *) {
     @apply text-neutral-700 dark:text-neutral-400;
 
-    transition: color 1s ease-in-out, background-color 1s ease-in-out;
+    transition:
+      color 1s ease-in-out,
+      background-color 1s ease-in-out;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       @apply font-serif text-neutral-900 dark:text-neutral-200;
     }
   }
@@ -38,14 +48,14 @@
       @apply py-1 px-1.5 rounded text-neutral-700! dark:text-neutral-400! dark:bg-neutral-700 bg-slate-200;
 
       &::before {
-        content: none;
+        content: none !important;
       }
 
       &::after {
-        content: none;
+        content: none !important;
       }
     }
-    
+
     li::marker {
       @apply text-neutral-700! dark:text-neutral-400!;
       transition: color 1s ease-in-out;
@@ -75,7 +85,7 @@
     --color-text-primary: 64 64 64;
   }
 
-  [data-theme="dark"] {
+  [data-theme='dark'] {
     --color-base: 0 0 0;
     --color-base-content: 25 25 25;
     --color-text-primary: 225 225 225;
