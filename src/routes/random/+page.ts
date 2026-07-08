@@ -1,6 +1,5 @@
-import type { PageLoad } from "./$types";
-import type { Post } from "$lib/types";
-import { goto } from "$app/navigation";
+import type { PageLoad } from './$types';
+import type { Post } from '$lib/types';
 
 export const load: PageLoad = async ({ fetch }) => {
   const response = await fetch('api/posts');
@@ -9,6 +8,6 @@ export const load: PageLoad = async ({ fetch }) => {
   const randomPost = posts[Math.floor(Math.random() * posts.length)];
 
   return {
-    slug: randomPost.slug
-  }
-}
+    slug: randomPost.slug,
+  };
+};

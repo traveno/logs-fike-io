@@ -1,9 +1,13 @@
 <script lang="ts">
-  import type { Post } from "$lib/types";
-  import { convertDate } from "$lib/utils";
+  import type { Post } from '$lib/types';
+  import { convertDate } from '$lib/utils';
 
-  export let posts: Post[];
-  $: recentPosts = posts.slice(0, 4);
+  interface Props {
+    posts: Post[];
+  }
+
+  let { posts }: Props = $props();
+  let recentPosts = $derived(posts.slice(0, 4));
 </script>
 
 <div class="border-b border-b-neutral-300 pb-4">

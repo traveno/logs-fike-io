@@ -1,14 +1,16 @@
-<script>
-  import { convertDate } from "$lib/utils";
+<script lang="ts">
+  import { convertDate } from '$lib/utils';
   import avatar from '$lib/assets/avatar.jpg';
-    import Tag from "$lib/components/Tag.svelte";
+  import Tag from '$lib/components/Tag.svelte';
 
-  /** @type string */
-  export let title;
-  /** @type string */
-  export let date;
-  /** @type string[] */
-  export let tags;
+  interface Props {
+    title: string;
+    date: string;
+    tags: string[];
+    children?: import('svelte').Snippet;
+  }
+
+  let { title, date, tags, children }: Props = $props();
 </script>
 
 <div class="px-4 md:px-8 mx-auto max-w-prose md:text-lg">
@@ -16,22 +18,18 @@
   <div class="flex flex-col gap-4 py-8">
     <h1 class="text-3xl sm:text-4xl font-serif tracking-tight">{title}</h1>
     <div class="flex flex-row justify-start items-center gap-2 sm:gap-4">
-
-      
       <div class="w-14 h-14 flex flex-col justify-center select-none pointer-events-none">
-        <img src="{avatar}" alt="It's me!" class="aspect-square rounded-full shadow-md" />
+        <img src={avatar} alt="It's me!" class="aspect-square rounded-full shadow-md" />
       </div>
       <div class="font-extralight sm:text-lg text-neutral-500 dark:text-neutral-400">Published {convertDate(date)}</div>
-      
+
       <div class="grow"></div>
 
       <div class="flex flex-row justify-center item-center gap-3">
         {#each tags as tag}
-        <Tag name={tag} />
+          <Tag name={tag} />
         {/each}
       </div>
-      
-      
     </div>
 
     <!-- <div class="w-1/12 mx-auto h-[1px] bg-neutral-300"></div> -->
@@ -57,6 +55,6 @@
   <!-- <div class="w-1/12 mx-auto h-[1px] bg-neutral-300"></div> -->
 
   <div class="prose md:prose-lg mt-8">
-    <slot />
+    {@render children?.()}
   </div>
 </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
-  export let data;
+  let { data } = $props();
 
   onMount(() => console.log(data));
 </script>
@@ -13,5 +13,5 @@
 </svelte:head>
 
 <article>
-  <svelte:component this={data.content} />
+  <data.content />
 </article>

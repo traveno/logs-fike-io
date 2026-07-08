@@ -2,8 +2,7 @@
   import { goto } from '$app/navigation';
   import { onMount } from 'svelte';
 
-  export let data;
-  const { slug } = data;
+  let { data } = $props();
 
-  onMount(() => goto(slug));
+  onMount(() => goto(data.slug));
 </script>
