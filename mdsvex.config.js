@@ -1,7 +1,11 @@
 import { defineMDSveXConfig as defineConfig, escapeSvelte } from "mdsvex";
+import { fileURLToPath } from "url";
+import path from "path";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Highligher
-import shiki from 'shiki';
+import { codeToHtml } from 'shiki';
 
 // Remark plugins
 import relativeImages from 'mdsvex-relative-images';
@@ -18,7 +22,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
-  layout: { blog: '/src/lib/post-layouts/Blog.svelte' },
+  layout: { blog: path.join(__dirname, 'src/lib/post-layouts/Blog.svelte') },
 
   smartypants: {
     dashes: true
@@ -38,8 +42,7 @@ const config = defineConfig({
   ],
   highlight: {
     highlighter: async (code, lang = 'text') => {
-      const highligher = await shiki.getHighlighter({ theme: 'slack-dark' });
-      const html = escapeSvelte(highligher.codeToHtml(code, { lang }));
+      const html = escapeSvelte(await codeToHtml(code, { lang, theme: 'slack-dark' }));
       return `{@html \`${html}\`}`;
     }
   }
