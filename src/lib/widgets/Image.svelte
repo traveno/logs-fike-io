@@ -1,8 +1,9 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
-    // export let imgURL: string | undefined;
     caption: string | undefined;
-    children?: import('svelte').Snippet;
+    children?: Snippet;
   }
 
   let { caption, children }: Props = $props();

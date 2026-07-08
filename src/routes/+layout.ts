@@ -8,12 +8,12 @@ export const load = async ({ url, fetch }) => {
   if (!browser) {
     return {
       url: url.pathname,
-      motd: await (await fetch('api/motd')).text(),
+      motd: await (await fetch('/api/motd')).text(),
     };
   }
 
   if (!motdPromise) {
-    motdPromise = fetch('api/motd').then(res => res.text());
+    motdPromise = fetch('/api/motd').then(res => res.text());
   }
 
   return {

@@ -117,21 +117,20 @@
 
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 flex flex-row gap-24 justify-evenly items-center">
       <div class="icon flex flex-row gap-4 lg:gap-6 justify-center">
-        <Button onclick={() => goto('/')} disabled={data.url === '/'} title="home">
+        <Button onclick={() => goto('/')} disabled={data.url === '/'} title="all posts">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
+            stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
             class={data.url === '/' ? 'icon-dim' : 'icon-bright'}
+            ><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" /></svg
           >
-            <path d="m12 19-7-7 7-7" />
-            <path d="M19 12H5" />
-          </svg>
         </Button>
 
         <Button onclick={() => toggleTheme('toggle')} title="toggle theme">

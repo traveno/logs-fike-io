@@ -6,7 +6,8 @@
   let { name }: Props = $props();
 </script>
 
-<div
+<a
+  href="/tag/{encodeURIComponent(name)}"
   class="w-fit tag font-mono text-sm rounded-full px-1.5 bg-blue-200 text-black dark:bg-neutral-700 dark:text-white opacity-75 hover:opacity-100 hover:scale-105 cursor-pointer"
 >
   <div class="flex flex-row items-center">
@@ -25,4 +26,4 @@
     </svg>
     <div class="font-extralight text-black dark:text-white">{name}</div>
   </div>
-</div>
+</a>

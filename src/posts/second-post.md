@@ -2,20 +2,21 @@
 title: LaTeX within Markdown, can it be done?
 date: 2023-08-08
 blurb: Who said that?
-published: false 
+published: true
 layout: blog
 tags:
   - testing
 ---
+
 <script>
   import Window from '/src/lib/widgets/Window.svelte';
 </script>
 
-If $Y_1$ is a standard normal random variable, then $Y_1^2$ will follow a Chi-square distribution with 1 degree of freedom
+If $Y_1$ is a standard normal random variable, then $Y_1^2$ will follow a Chi-square distribution with 1 degree of
+freedom
 
-
-It can be observed that $Y_1$ has a range of $-1 \leq Y_1 \leq 1$. Similarly, $Y_2$ is $0 \leq Y_2 \leq 1$. To form the triangle shape,
-an additional constraint is needed: $|Y_1| + Y_2 \leq 1$.
+It can be observed that $Y_1$ has a range of $-1 \leq Y_1 \leq 1$. Similarly, $Y_2$ is $0 \leq Y_2 \leq 1$. To form the
+triangle shape, an additional constraint is needed: $|Y_1| + Y_2 \leq 1$.
 
 $$
 \begin{equation*}
@@ -40,5 +41,4 @@ $$
 \end{align*}
 $$
 
-The uniqueness property of mgfs allows us to show that $U$ follows a Chi-square distribution with 2
-degrees of freedom.
+The uniqueness property of mgfs allows us to show that $U$ follows a Chi-square distribution with 2 degrees of freedom.

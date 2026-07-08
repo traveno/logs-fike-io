@@ -1,5 +1,5 @@
 ---
-title: "The K3 Saga: Part I"
+title: 'The K3 Saga: Part I'
 date: 2023-10-31
 blurb: It begins.
 published: true
@@ -9,6 +9,7 @@ tags:
   - annex
   - electronics
 ---
+
 <script>
   import Image from '/src/lib/widgets/Image.svelte';
 </script>
