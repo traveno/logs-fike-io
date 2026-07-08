@@ -51,8 +51,17 @@
     themeChangeInProgress = false;
   }
 
-  function copyLink() {
-    navigator.clipboard.writeText(window.location.href);
+  let copied = $state(false);
+
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copied = true;
+      await sleep(1500);
+      copied = false;
+    } catch {
+      // Clipboard unavailable (insecure context / denied permission) — no feedback.
+    }
   }
 
   let themeChangeInProgress = false;
@@ -81,6 +90,22 @@
   </script>
 </svelte:head>
 
+{#snippet checkmark()}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="h-3.5 w-3.5 stroke-green-400"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+{/snippet}
+
 <div
   class="relative lg:container lg:mx-auto lg:max-w-4xl w-full lg:shadow-xl ring-1 rounded-lg ring-slate-900/5 dark:ring-white/5 overflow-hidden"
 >
@@ -92,7 +117,7 @@
 
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 flex flex-row gap-24 justify-evenly items-center">
       <div class="icon flex flex-row gap-4 lg:gap-6 justify-center">
-        <Button onclick={() => goto('/')} disabled={data.url === '/'} title="Home">
+        <Button onclick={() => goto('/')} disabled={data.url === '/'} title="home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -109,7 +134,7 @@
           </svg>
         </Button>
 
-        <Button onclick={() => toggleTheme('toggle')} title="Theme toggle">
+        <Button onclick={() => toggleTheme('toggle')} title="toggle theme">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -125,7 +150,11 @@
           </svg>
         </Button>
 
-        <Button onclick={() => copyLink()} title="Copy link">
+        <Button
+          onclick={() => copyLink()}
+          title={copied ? 'copied!' : 'copy link'}
+          tooltipIcon={copied ? checkmark : undefined}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
