@@ -171,62 +171,68 @@
         </Button>
       </div>
 
-      <div class="flex flex-row gap-3 items-center select-none font-thin tracking-tighter">
-        <div class="flex flex-row items-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-bright w-6 h-6"
-            ><path
-              d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"
-            /></svg
-          >
-          <span class="font-mono text-2xl sm:text-2xl">logs</span>
+      <div class="relative">
+        <div class="flex flex-row gap-3 items-center select-none font-thin tracking-tighter">
+          <div class="flex flex-row items-center gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-bright w-6 h-6"
+              ><path
+                d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"
+              /></svg
+            >
+            <span class="font-mono text-2xl sm:text-2xl">logs</span>
+          </div>
+          <div class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400 dark:text-neutral-600">\</div>
+          <div class="flex-row items-center gap-1 hidden sm:flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-dim w-6 h-6"
+              ><path
+                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
+              /><path d="M2 10h20" /></svg
+            >
+            <span class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400 dark:text-neutral-600"
+              >fike</span
+            >
+          </div>
+          <div class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400 dark:text-neutral-600">\</div>
+          <div class="flex-row items-center gap-1 hidden sm:flex text-neutral-400 dark:text-neutral-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-dim w-6 h-6"
+              ><path
+                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
+              /><path d="M2 10h20" /></svg
+            >
+            <span class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400 dark:text-neutral-600">io</span
+            >
+          </div>
         </div>
-        <div class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400! dark:text-neutral-700!">\</div>
-        <div class="flex-row items-center gap-1 hidden sm:flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-dim w-6 h-6"
-            ><path
-              d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
-            /><path d="M2 10h20" /></svg
-          >
-          <span class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400! dark:text-neutral-700!"
-            >fike</span
-          >
-        </div>
-        <div class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400! dark:text-neutral-700!">\</div>
-        <div class="flex-row items-center gap-1 hidden sm:flex text-neutral-400 dark:text-neutral-700">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon-dim w-6 h-6"
-            ><path
-              d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"
-            /><path d="M2 10h20" /></svg
-          >
-          <span class="font-mono text-2xl sm:text-2xl hidden sm:block text-neutral-400! dark:text-neutral-700!">io</span
-          >
+
+        <div class="font-mono text-xs text-neutral-400 dark:text-neutral-600 absolute top-10 right-0">
+          {data.motd}
         </div>
       </div>
     </div>

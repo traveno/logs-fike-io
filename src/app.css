@@ -68,7 +68,7 @@
   }
 
   .icon-dim path {
-    @apply stroke-neutral-400 dark:stroke-neutral-700;
+    @apply stroke-neutral-400 dark:stroke-neutral-600;
     transition: stroke 1s ease-in-out;
   }
 
