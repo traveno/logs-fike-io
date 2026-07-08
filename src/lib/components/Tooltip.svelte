@@ -22,9 +22,10 @@
 
   const [triggerRef, tooltipContent] = createFloatingActions({
     strategy: 'absolute',
-    placement,
     middleware: [offset(8), flip(), shift({ padding: 8 })],
   });
+
+  let contentOptions = $derived({ placement });
 
   const show = () => (visible = true);
   const hide = () => (visible = false);
@@ -39,10 +40,10 @@
 
 {#if visible && text}
   <div
-    use:tooltipContent
+    use:tooltipContent={contentOptions}
     role="tooltip"
     transition:fade={{ duration: 100 }}
-    class="pointer-events-none z-50 inline-flex w-max max-w-xs items-center gap-1 rounded-md bg-neutral-800 px-2 py-1 text-xs font-mono !text-neutral-100 shadow-lg dark:bg-neutral-700"
+    class="pointer-events-none z-50 inline-flex w-max max-w-xs items-center gap-1 rounded-md bg-neutral-800 px-2 py-1 text-xs font-mono text-neutral-100! shadow-lg dark:bg-neutral-700"
   >
     {@render icon?.()}
     {text}
