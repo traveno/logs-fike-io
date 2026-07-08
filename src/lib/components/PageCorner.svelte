@@ -236,8 +236,8 @@
       #ffffff,
       #f3f3f3 45%,
       #000000 50%,
-      #b3b3b3 50%,
-      #d3d3d3 56%,
+      #eaeaea 50%,
+      #dddddd 56%,
       #e6e6e6 62%,
       #f3f3f3 80%,
       #eeeeee 100%
@@ -283,7 +283,7 @@
       max-width: 300px;
       max-height: 100px;
       height: 40%;
-      box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.1);
       transform: skew(0deg) rotate(10deg);
 
       /* Dark mode */
@@ -314,7 +314,7 @@
       max-width: 300px;
       max-height: 100px;
       height: 40%;
-      box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.1);
       transform: skew(0deg) rotate(80deg);
 
       /* Dark mode */
