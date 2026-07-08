@@ -4,6 +4,7 @@
   import { onMount } from 'svelte';
   import PageCorner from '$lib/components/PageCorner.svelte';
   import { sleep } from '$lib/utils';
+  import Button from '$lib/components/Button.svelte';
 
   let { data, children } = $props();
 
@@ -50,6 +51,10 @@
     themeChangeInProgress = false;
   }
 
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+  }
+
   let themeChangeInProgress = false;
   let cornerIsVisible = $state(false);
 
@@ -87,14 +92,7 @@
 
     <div class="text-center px-4 py-2 lg:px-8 lg:py-4 flex flex-row gap-24 justify-evenly items-center">
       <div class="icon flex flex-row gap-4 lg:gap-6 justify-center">
-        <button
-          onclick={() => goto('/')}
-          disabled={data.url === '/'}
-          title="Home"
-          class="p-3 rounded-full bg-neutral-500/0 duration-200 {data.url === '/'
-            ? 'bg-neutral-500/0'
-            : 'cursor-pointer bg-neutral-500/0 hover:hover:bg-neutral-500/20'}"
-        >
+        <Button onclick={() => goto('/')} disabled={data.url === '/'} title="Home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -109,13 +107,9 @@
             <path d="m12 19-7-7 7-7" />
             <path d="M19 12H5" />
           </svg>
-        </button>
+        </Button>
 
-        <button
-          onclick={() => toggleTheme('toggle')}
-          title="Theme toggle"
-          class="p-3 rounded-full bg-neutral-500/0 duration-200 cursor-pointer bg-opacity-0 hover:bg-neutral-500/20"
-        >
+        <Button onclick={() => toggleTheme('toggle')} title="Theme toggle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -129,12 +123,9 @@
           >
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
           </svg>
-        </button>
-        <button
-          onclick={() => (cornerIsVisible = !cornerIsVisible)}
-          title="Toggle corner visibility"
-          class="p-3 rounded-full bg-neutral-500/0 duration-200 cursor-pointer hover:bg-neutral-500/20"
-        >
+        </Button>
+
+        <Button onclick={() => copyLink()} title="Copy link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -148,7 +139,7 @@
           >
             <path d="M15 7h2a5 5 0 0 1 0 10h-2m-6 0H7A5 5 0 0 1 7 7h2" />
           </svg>
-        </button>
+        </Button>
       </div>
 
       <div class="flex flex-row gap-3 items-center select-none font-thin tracking-tighter">
