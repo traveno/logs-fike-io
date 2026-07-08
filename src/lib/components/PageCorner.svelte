@@ -37,6 +37,8 @@
     strategy: 'absolute',
     placement: 'left',
     middleware: [offset(15), arrow({ element: arrowRef })],
+    // Update position every animation frame
+    autoUpdate: { animationFrame: true },
     onComputed({ placement, middlewareData }) {
       const { x, y } = middlewareData.arrow!;
       const staticSide = {
